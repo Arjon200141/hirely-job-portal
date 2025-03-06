@@ -59,6 +59,52 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "/dashboard",
+        element: <DashboardCh></DashboardCh>
+      },
+      {
+        path: "profile",
+        element: <Profile></Profile>
+      },
+      {
+        path: "createcv",
+        element: <CreateCV></CreateCV>
+      },
+      {
+        path: "appliedjobs",
+        element: <AppliedJobs></AppliedJobs>
+      },
+      {
+        path: "savedjobs",
+        element: <SavedJobs></SavedJobs>
+      },
+      {
+        path: "company",
+        element: <Company></Company>
+      },
+      {
+        path: "recruiting",
+        element: <Recruiting></Recruiting>
+      },
+      {
+        path: "message",
+        element: <Message></Message>
+      },
+      {
+        path: "getjobalert",
+        element: <GetAJobAlert></GetAJobAlert>
+      },
+      {
+        path: "settings",
+        element: <Settings></Settings>
+      }
+    ]
+  }
 ]);
 
 export default router;
