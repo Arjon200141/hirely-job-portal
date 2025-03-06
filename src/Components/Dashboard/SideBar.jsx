@@ -9,58 +9,58 @@ const SideBar = () => {
         {
             title:"Dashboard",
             icon:"https://i.ibb.co.com/xqnMHPNc/dashboard-1.png",
-            path:"dashboard",
+            path:"/dashboard",
             w:"50px"
         },
         {
             title:"Profile",
             icon:"https://i.ibb.co.com/vxSV4JFP/image.png",
-            path:"dashboard"
+            path:"/dashboard/profile"
         },
         {
             title:"Create CV",
             icon:"https://i.ibb.co.com/GQWmrQ48/image.png",
-            path:"dashboard"
+            path:"/dashboard/createcv"
         },
         {
             title:"Applied Jobs",
             icon:"https://i.ibb.co.com/99mMhNxv/a3c415ecce352a368e708cb12d4f62d4.png",
-            path:"dashboard"
+            path:"/dashboard/appliedjobs"
         },
         {
             title:"Saved Jobs",
             icon:"https://i.ibb.co.com/rRhLknQb/bc4f7e1bb7957bb133982bf278f80c3f.png",
-            path:"dashboard"
+            path:"/dashboard/savedjobs"
         },
         {
             title:"Company",
             icon:"https://i.ibb.co.com/3mRS5cNS/00ebb177f6cf4c54344d592ec43d4df7.png",
-            path:"dashboard"
+            path:"/dashboard/company"
         },
         {
             title:"Recruiting",
             icon:"https://i.ibb.co.com/ZzF5RPxQ/31f168d98938f89f5a93fc69f2adeafa.png",
-            path:"dashboard"
+            path:"/dashboard/recruiting"
         },
         {
             title:"Message",
             icon:"https://i.ibb.co.com/mFS4ycJY/e5fe06b2b901ba416af1480602df7613.png",
-            path:"dashboard"
+            path:"/dashboard/message"
         },
         {
             title:"Get Job Alert",
             icon:"https://i.ibb.co.com/TxH5x7MJ/0fd2903a437626895f1a16d355618453.png",
-            path:"dashboard"
+            path:"/dashboard/getjobalert"
         },
         {
             title:"Settings",
             icon:"https://i.ibb.co.com/PG8kJ1WJ/image.png",
-            path:"dashboard"
+            path:"/dashboard/settings"
         },
         {
             title:"Logout",
             icon:"https://i.ibb.co.com/YTQsHq71/image.png",
-            path:"dashboard"
+            path:"/dashboard"
         },
         
     ]
@@ -70,7 +70,11 @@ const SideBar = () => {
         <div className='col-span-2 pt-20'>
             <div className='flex flex-col items-center mb-20'>
                 <div className=' relative'>
-                    <img src="https://i.ibb.co.com/x8G2rBq6/candidate-default.png" alt="" />
+                    <div className='flex justify-center items-center border-[4px] rounded-full'>
+                    <img className='w-[150px]' src="https://i.ibb.co.com/S4J9jhj1/image.png" alt="" />
+
+                    </div>
+                    
                     <div className='w-[30px] h-[30px] bg-blue-50 text-blue-700 flex justify-center items-center rounded-full shadow-sm shadow-black absolute top-5 right-0'>
                         <IoCameraOutline className='text-xl' />
                     </div>
