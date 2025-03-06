@@ -46,8 +46,8 @@ const JobDetails = () => {
             </div>
             <h2 className="text-[#23B33A] mt-[44px] text-[24px] nunito font-bold">Job Details</h2>
             <h2 className="text-[#0079C1] mt-[43px] nunito text-[30px] nunito font-bold">Job Responsibilities:</h2>
-            {/* Job Responsibilities */}
-            <section className="mt-6 mr-[205px]">
+
+            <section className="mt-[24px] mr-[205px]">
                 <ul className="list-disc list-inside mt-2 text-gray-700">
                     <p className="text-[24px] font-normal nunito">Assist in various departments, including agriculture financing, supply chain management, and data analysis, to gain hands-on industry experience.</p>
                     <li className="text-[24px] font-normal nunito">Conduct research and market analysis to support business strategies and identify opportunities for agricultural innovation.</li>
@@ -58,7 +58,6 @@ const JobDetails = () => {
                 </ul>
             </section>
 
-            {/* Education */}
             <section className="mt-6">
                 <h2 className="text-[#0079C1] mt-[43px]  text-[30px] nunito font-bold mb-8">Education</h2>
                 <p className="text-[24px] font-normal nunito">Minimum Qualification: Bachelor Degree</p>
