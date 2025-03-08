@@ -66,7 +66,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/more-info/:courseId",
-        element: <MoreInfo></MoreInfo>
+        element: <MoreInfo />,
+        loader: async ({ params }) => {
+          const { courseId } = params;
+          const response = await fetch(`http://localhost:5000/courses/${courseId}`);
+          if (!response.ok) {
+            throw new Error("Course not found");
+          }
+          return response.json();
+        }
       },
       {
         path: "/dashboard",
@@ -116,7 +124,7 @@ const router = createBrowserRouter([
       }
     ]
   },
-  
+
 ]);
 
 export default router;
