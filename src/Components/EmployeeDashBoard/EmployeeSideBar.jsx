@@ -82,9 +82,16 @@ const EmployeeSideBar = () => {
 
     const {logout}=useContext(UserContext);
         const nav = useNavigate()
+        const scrollToTop = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth', // Optional: Enables smooth scrolling
+            });
+        };
     
         const handleLogOut = () => {
             logout(() => {
+                scrollToTop()
                 nav("/"); // Navigate to the home page after logout
             });
         };

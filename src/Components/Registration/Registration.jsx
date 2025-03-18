@@ -42,7 +42,7 @@ const Registration = () => {
     const [termsChecked, setTermsChecked] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
 
-    const {isLoggedIn,setIsLoggedIn,setUser}= useContext(UserContext);
+    const {tempUser,setTempUser}= useContext(UserContext);
     
     const nav = useNavigate();
 
@@ -100,16 +100,13 @@ const Registration = () => {
             if (response.ok) {
                 const data = await response.json();
                 console.log('User registered successfully:', data);
-                const authUser={
-                    name:user.name,
-                    phoneNumber:user.phoneNumber,
-                    email:user.email,
-                    userRoll:user.userRoll
+                setTempUser(data.user);
+                console.log(data.user);
+                console.log(tempUser); // Store the user data temporarily
 
-                }
-                setUser(authUser);
-                setIsLoggedIn(true);
-                nav("/");
+                // Navigate to the OTP verification page
+                nav("/otp");
+                
                 
                 
                 setErrorMessage(""); // Clear any error messages

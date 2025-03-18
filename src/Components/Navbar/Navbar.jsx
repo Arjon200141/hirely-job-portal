@@ -25,9 +25,9 @@ const Navbar = () => {
             <NavLink to="/findjob" style={navlinkStyles}>
                 <li className="epilogue font-normal text-[16px]">Find Job</li>
             </NavLink>
-            <NavLink to="/coursepage" style={navlinkStyles}>
+            {/* ``<NavLink to="/coursepage" style={navlinkStyles}>
                 <li className="epilogue font-normal text-[16px]">Courses</li>
-            </NavLink>
+            </NavLink>`` */}
             <NavLink to="/support" style={navlinkStyles}>
                 <li className="epilogue font-normal text-[16px]">Get Support</li>
             </NavLink>
@@ -46,9 +46,9 @@ const Navbar = () => {
             <NavLink to="/employeepricing" style={navlinkStyles}>
                 <li className="epilogue font-normal text-[16px]">Pricing</li>
             </NavLink>
-            <NavLink to="/candidate" style={navlinkStyles}>
+            {/* <NavLink to="/candidate" style={navlinkStyles}>
                 <li className="epilogue font-normal text-[16px]">Candidate</li>
-            </NavLink>
+            </NavLink> */}
             <NavLink to="/employeerecruit" style={navlinkStyles}>
                 <li className="epilogue font-normal text-[16px]">Direct Recruiting</li>
             </NavLink>
@@ -88,8 +88,7 @@ const Navbar = () => {
                         <ul
                             tabIndex={0}
                             className="epilogue menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            {user?.userRoll === "ADMIN" ? adminLinks : commonLinks}
-                            {isLoggedIn && user?.userRoll !== "ADMIN" && loggedInUserLinks}
+                            {user?.userRoll === "AGENCY" ? adminLinks : commonLinks}
                         </ul>
                     </div>
                     <NavLink to="/" className="belanosima text-[40px] mr-6">
@@ -98,9 +97,8 @@ const Navbar = () => {
                 </div>
                 <div className="mr-[50px] navbar-center hidden lg:flex">
                     <ul className="menu font-normal menu-horizontal gap-6 px-1">
-                        {user?.userRoll === "ADMIN" ? adminLinks : commonLinks}
-                        {isLoggedIn && user?.userRoll !== "ADMIN" && loggedInUserLinks}
-                        {isLoggedIn && user?.userRoll !== "ADMIN" && (
+                        {user?.userRoll === "AGENCY" ? adminLinks : commonLinks}
+                        {isLoggedIn && user?.userRoll !== "AGENCY" && (
                             <div className="flex gap-5 justify-center items-center">
                                 <img
                                     onClick={() => nav("/dashboard/getjobalert")}
@@ -123,7 +121,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {user?.userRoll === "ADMIN" ? (
+                    {user?.userRoll === "AGENCY" ? (
                         <img
                             onClick={() => nav("/employeedashboard")}
                             className="w-14 p-[2px] border-2 rounded-full cursor-pointer"
@@ -137,19 +135,19 @@ const Navbar = () => {
                     ) : (
                         <>
                             <NavLink to="/login">
-                                <a className="btn font-normal bg-white w-28 mr-5 text-[#0079C1] border-[#0079C1]">
+                                <p className="btn font-normal bg-white w-28 mr-5 text-[#0079C1] border-[#0079C1]">
                                     Login
-                                </a>
+                                </p>
                             </NavLink>
                             <NavLink to="/register">
-                                <a className="btn bg-[#0079C1] w-28 mr-5 text-white font-normal">
+                                <p className="btn bg-[#0079C1] w-28 mr-5 text-white font-normal">
                                     Register
-                                </a>
+                                </p>
                             </NavLink>
                             <NavLink to="/agency">
-                                <a className="btn font-normal w-28 mr-5 bg-[#F2F2F2] text-[#424447]">
+                                <p className="btn font-normal w-28 mr-5 bg-[#F2F2F2] text-[#424447]">
                                     For Agency
-                                </a>
+                                </p>
                             </NavLink>
                             <a className="btn bg-white text-[#0079C1] mr-5 font-normal border-[#0079C1]">
                                 English
