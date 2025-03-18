@@ -25,9 +25,11 @@ const Navbar = () => {
             <NavLink to="/findjob" style={navlinkStyles}>
                 <li className="epilogue font-normal text-[16px]">Find Job</li>
             </NavLink>
+
             {/* ``<NavLink to="/coursepage" style={navlinkStyles}>
                 <li className="epilogue font-normal text-[16px]">Courses</li>
             </NavLink>`` */}
+
             <NavLink to="/support" style={navlinkStyles}>
                 <li className="epilogue font-normal text-[16px]">Get Support</li>
             </NavLink>
@@ -46,9 +48,11 @@ const Navbar = () => {
             <NavLink to="/employeepricing" style={navlinkStyles}>
                 <li className="epilogue font-normal text-[16px]">Pricing</li>
             </NavLink>
+
             {/* <NavLink to="/candidate" style={navlinkStyles}>
                 <li className="epilogue font-normal text-[16px]">Candidate</li>
             </NavLink> */}
+            
             <NavLink to="/employeerecruit" style={navlinkStyles}>
                 <li className="epilogue font-normal text-[16px]">Direct Recruiting</li>
             </NavLink>

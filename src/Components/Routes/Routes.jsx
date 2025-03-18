@@ -66,6 +66,24 @@ const router = createBrowserRouter([
         path: "/agency",
         element: <Agency></Agency>
       },
+
+      {
+        path: "/otp",
+        element: <OTPverification></OTPverification>
+      },
+      {
+        path: "/accCreated",
+        element: <AccountCreated></AccountCreated>
+      },
+      {
+        path: "/verifyacc",
+        element: <VerifyAccount></VerifyAccount>
+      },
+      {
+        path: "/verified",
+        element:<Verified></Verified>
+      },
+
       {
         path: "/register",
         element: <Registration></Registration>
